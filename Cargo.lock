@@ -3338,6 +3338,7 @@ name = "radlands"
 version = "0.1.0"
 dependencies = [
  "bevy",
+ "bevy_picking",
  "bevy_prototype_lyon",
  "log",
 ]

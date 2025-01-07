@@ -3,8 +3,7 @@ use bevy::prelude::*;
 use bevy::sprite::AlphaMode2d;
 
 use crate::interaction;
-use interaction::on_drag;
-use interaction::Zoomable;
+use interaction::on_left_mouse_drag;
 use interaction::{on_right_click_down, on_right_click_up};
 
 pub fn load_base_cards(
@@ -25,9 +24,8 @@ pub fn load_base_cards(
                 texture: Some(texture_handle),
             })),
             Transform::from_xyz(-168.0, -212.0, 0.0),
-            Zoomable,
         ))
-        .observe(on_drag)
+        .observe(on_left_mouse_drag)
         .observe(on_right_click_down)
         .observe(on_right_click_up);
 }
