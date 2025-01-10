@@ -21,7 +21,8 @@ fn main() {
                 primary_window: Some(Window {
                     title: "Radlands".to_string(), // Window title
                     mode: WindowMode::Windowed,
-                    resolution: WindowResolution::new(WINDOW_WIDTH, WINDOW_HEIGHT),
+                    resolution: WindowResolution::new(WINDOW_WIDTH, WINDOW_HEIGHT)
+                        .with_scale_factor_override(1.),
                     position: WindowPosition::new(IVec2::new(0, 0)),
                     resizable: false,
                     ..default()

@@ -3,7 +3,7 @@ use bevy::prelude::*;
 use bevy::sprite::AlphaMode2d;
 
 use crate::interaction;
-use interaction::on_left_mouse_drag;
+use interaction::on_left_mouse_drag_on_card;
 use interaction::{on_right_click_down, on_right_click_up};
 
 pub fn load_base_cards(
@@ -25,7 +25,7 @@ pub fn load_base_cards(
             })),
             Transform::from_xyz(-168.0, -212.0, 0.0),
         ))
-        .observe(on_left_mouse_drag)
+        .observe(on_left_mouse_drag_on_card)
         .observe(on_right_click_down)
         .observe(on_right_click_up);
 }
