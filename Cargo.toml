@@ -10,7 +10,8 @@ log = { version = "*", features = [
     "release_max_level_warn",
 ] }
 bevy_prototype_lyon = "0.13.0"
-bevy_picking = "0.15.1"
+# bevy_picking = "0.15.1"
+winit = "0.30.8"
 
 # Enable a small amount of optimization in the dev profile.
 [profile.dev]

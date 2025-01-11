@@ -47,14 +47,18 @@ To install dependencies, run:
 cargo build
 ```
 
-## Running 
+## Running
 
 To run the game locally:
 
 ```bash
 cargo watch -x "run"
 ```
+or in release mode:
 
+```bash
+cargo watch -x "run --release"
+```
 
 ## License
 
