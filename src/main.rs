@@ -6,13 +6,13 @@ use std::env;
 
 mod areas;
 mod background;
-mod base_cards;
+mod cards;
 mod interaction;
-use areas::animate_glow;
 use areas::areas;
+use areas::{animate_glow, on_test, stop_glow};
 use background::setup;
 use background::{WINDOW_HEIGHT, WINDOW_WIDTH};
-use base_cards::load_base_cards;
+use cards::base_cards::load_base_cards;
 use interaction::{on_scroll_click_down, on_scroll_click_up, scroll_events};
 
 fn main() {
@@ -24,7 +24,7 @@ fn main() {
                     title: "Radlands".to_string(), // Window title
                     mode: WindowMode::Windowed,
                     resolution: WindowResolution::new(WINDOW_WIDTH, WINDOW_HEIGHT)
-                        .with_scale_factor_override(1.5),
+                        .with_scale_factor_override(1.),
                     position: WindowPosition::new(IVec2::new(0, 0)),
                     resizable: false,
                     ..default()
@@ -36,7 +36,9 @@ fn main() {
             ShapePlugin,
         ))
         .add_systems(Startup, areas)
+        .add_systems(Update, on_test)
         .add_systems(Update, animate_glow)
+        .add_systems(Update, stop_glow)
         .add_systems(Startup, setup)
         .add_systems(Startup, load_base_cards)
         .add_systems(

@@ -8,9 +8,9 @@ use interaction::on_left_mouse_drag_on_board;
 pub const BOARD_WIDTH: f32 = 2844.0;
 pub const BOARD_HEIGHT: f32 = 2048.0;
 pub const BOARD_RATIO: f32 = BOARD_WIDTH / BOARD_HEIGHT;
-pub const WINDOW_WIDTH: f32 = 2100.0;
+pub const WINDOW_WIDTH: f32 = 2600.0;
 pub const WINDOW_HEIGHT: f32 = WINDOW_WIDTH / BOARD_RATIO;
-pub const EDGE_MARGIN: f32 = 30.0;
+pub const EDGE_MARGIN: f32 = 60.0;
 
 pub fn setup(
     mut commands: Commands,
